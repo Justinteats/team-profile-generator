@@ -6,7 +6,6 @@ const jest = require("jest");
 const Manager = require('./__tests__/Manager.test');
 const Engineer = require('./__tests__/Engineer.test');
 const Intern = require('./__tests__/Intern.test');
-const Employee = require('./__tests__/Employee.test');
 
 const teamMembers = [];
 const idArray = [];
@@ -135,8 +134,8 @@ const managerPrompt = [
     
     
     // function to handle choice of new employee to add or end function.
-    function newEmp() {
-        inquirer.prompt(newEmpPrompt).then((answers) => {
+    function newEmployee() {
+        inquirer.prompt().then((answers) => {
             switch (answers.employeeType) {
                 case "Add an Engineer.":
                     newEngineer();
